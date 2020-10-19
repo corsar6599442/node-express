@@ -1,0 +1,32 @@
+
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "application from express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corsar6599442/node-express.git"
+  },
+  "keywords": [
+    "express",
+    "js",
+    "javascript"
+  ],
+  "author": "Mikhail Zakharov <corsar6599442@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corsar6599442/node-express/issues"
+  },
+  "homepage": "https://github.com/corsar6599442/node-express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
