@@ -1,4 +1,3 @@
-
 {
   "name": "node-express",
   "version": "1.0.0",
@@ -24,7 +23,8 @@
   },
   "homepage": "https://github.com/corsar6599442/node-express#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.5"
