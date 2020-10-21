@@ -1,13 +1,13 @@
-const uuid = require('uuid/dist/v4')
+const {v4: uuidv4} = require('uuid')// как у Владилена не работает, а так да.
 const fs = require('fs')
 const path = require('path')
-
+//console.log('id=', uuidv4())
 class Course {
     constructor(title, price, image) {
         this.title = title
         this.price = price
         this.image = image
-        this.id = uuid
+        this.id = uuidv4()
     }
 
     toJSON() {
