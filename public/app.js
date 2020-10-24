@@ -5,18 +5,19 @@ document.querySelectorAll('.price').forEach(node => {
   }).format(node.textContent)
 })
 
-const $csrd = document.querySelector('#card')
+const $card = document.querySelector('#card')
 if ($card) {
 	$card.addEventListener('click', event => {
 		if (event.target.classList.contains('js-remove')) {
 			const id = event.target.dataset.id
 
-			fetch('/card/remove'+id, {
+			fetch('/card/remove/' +id, {
 				method: 'delete'
 			}).then(res => res.json())
-			.then(card => {
-				console.log(card)
-			})
+				.then(card => {
+					console.log(card)
+				})
 		}
+
 	})
 }

@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+
 const p = path.join(
   path.dirname(process.mainModule.filename),
   'data',
@@ -7,7 +8,6 @@ const p = path.join(
 )
 
 class Card {
-
   static async add(course) {
     const card = await Card.fetch()
 
@@ -43,7 +43,7 @@ static async remove(id) {
 	const idx = card.courses.findIndex(c => c.id === id)
 	const course = card.courses[idx]
 
-	if (cours.count === 1){
+	if (course.count === 1) {
 		//удалить
 		card.courses = card.courses.filter(c => c.id !== id)
 	} else {
@@ -76,6 +76,5 @@ static async remove(id) {
     })
   }
 }
-
 
 module.exports = Card
