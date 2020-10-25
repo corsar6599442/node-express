@@ -1,4 +1,4 @@
-const { Router } = require('express')
+const {Router} = require('express')
 const Course = require('../models/course')
 const router = Router()
 
@@ -16,6 +16,5 @@ router.post('/', async (req, res) => {
 
     res.redirect('/courses')
 })
-
 
 module.exports = router
