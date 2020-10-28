@@ -27,6 +27,8 @@ app.use('/card', cardRoutes)
 
 const PORT = process.env.PORT || 3000
 
+const password = 'w2IXBcBnaRJmLsqL'
+
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`)
 })
