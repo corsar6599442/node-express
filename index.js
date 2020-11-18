@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
 const homeRoutes = require('./routes/home')
 const cardRoutes = require('./routes/card')
@@ -27,9 +28,19 @@ app.use('/card', cardRoutes)
 
 const PORT = process.env.PORT || 3000
 
-const password = 'nxtn5Lo6VnZAOWyX'
-const url = `mongodb+srv://corsar6599442:${password}@cluster0.t3hou.mongodb.net/<dbname>?retryWrites=true&w=majority`
+async function start() {
+	try {
 
-app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`)
-})
+	} catch (e) {
+		console.log(e)
+	}
+	const url = `mongodb+srv://corsar6599442:nxtn5Lo6VnZAOWyX@cluster0.t3hou.mongodb.net/<dbname>?retryWrites=true&w=majority`
+	await mongoose.connect(url, { useNewUrlParser: true })
+	app.listen(PORT, () => {
+		console.log(`Server is running on port ${PORT}`)
+	})
+}
+
+start()
+
+
