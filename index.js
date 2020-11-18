@@ -27,7 +27,8 @@ app.use('/card', cardRoutes)
 
 const PORT = process.env.PORT || 3000
 
-const password = 'w2IXBcBnaRJmLsqL'
+const password = 'nxtn5Lo6VnZAOWyX'
+const url = `mongodb+srv://corsar6599442:${password}@cluster0.t3hou.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`)
